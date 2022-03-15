@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400&family=Poppins&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #89e0d1;
+  padding: 0.3rem 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+header .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar button {
+  background: #0a175c;
+  color: white;
+  padding: 0.3rem 1rem;
+  border: 3px solid #0a175c;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+header .navbar button:hover {
+  background: #89e0d1;
+  color: #0a175c;
+  font-weight: 700;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: 1rem;
+  padding: 30px;
+  color: #0a175c;
+  display: block;
+}
+
+header .navbar ul li a:hover {
+  background: white;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+}
+
+header .navbar ul li ul li a {
+  font-size: 1rem;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+header #menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1120px) {
+  header {
+    padding: 30px;
+    background: white;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    padding-bottom: 1.5rem;
+  }
+  header .navbar button {
+    width: 93%;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+  header .navbar button:hover {
+    background: white;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: white;
+  }
+  header .navbar ul li ul li a {
+    font-size: 1rem;
+  }
+  header #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}
+
+main .hero {
+  background: #89e0d1;
+  padding: 1rem 7rem;
+  position: relative;
+  margin-top: 3rem;
+}
+
+main .hero .hero__container {
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .hero .hero__container .hero__container--left {
+  height: 100%;
+  width: 40%;
+}
+
+main .hero .hero__container .hero__container--left h1 {
+  color: #0a175c;
+  font-family: "Anton", sans-serif;
+  font-size: 60px;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+main .hero .hero__container .hero__container--left p {
+  color: #0a175c;
+  font-family: Poppins;
+  margin-bottom: 2rem;
+}
+
+main .hero .hero__container .hero__container--left button {
+  padding: 8px 60px;
+  outline: none;
+  border-radius: 5px;
+  background: #0a175c;
+}
+
+main .hero .hero__container .hero__container--left button a {
+  text-decoration: none;
+  color: white;
+}
+
+main .hero .hero__container .hero__container--left button:hover {
+  border: 2px solid #0a175c;
+  color: #0a175c;
+  background: #89e0d1;
+}
+
+main .hero .hero__container .hero__container--left button:hover a {
+  color: #0a175c;
+}
+
+main .hero .hero__container--right {
+  height: 100%;
+  position: relative;
+  width: 60%;
+  text-align: center;
+}
+
+main .hero .hero__container--right figure {
+  position: relative;
+  height: 50%;
+}
+
+main .hero .hero__container--right figure #girl {
+  width: 35%;
+}
+
+main .hero .hero__container--right figure #man {
+  width: 15%;
+  position: absolute;
+  left: 25%;
+  bottom: -10%;
+}
+
+main .hero .hero__container--right #dots {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  left: 15%;
+}
+
+@media (min-width: 992px) {
+  main .hero .hero__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main .hero #ribbon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.tabs {
+  padding: 5rem 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.tabs .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .tabs .title img {
+    position: absolute;
+    top: 25%;
+    right: -20%;
+    width: 20%;
+  }
+}
+
+.tabs .title h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  color: #0a175c;
+  margin-bottom: 2rem;
+}
+
+.tabs .title p {
+  color: #0a175c;
+  text-align: center;
+  font-family: "Popins", sans-serif;
+  font-size: 1.3rem;
+}
+
+.tabs .tab-header {
+  color: #0a175c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+.tabs .tab-header div {
+  width: calc(100% / 3);
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3rem;
+  outline: none;
+}
+
+.tabs .tab-header div.active {
+  color: #89e0d1;
+}
+
+.tabs .tab-indicator {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+  position: relative;
+  width: calc(100% / 3);
+  height: 0.2rem;
+  background: #89e0d1;
+  left: 0%;
+  border-radius: 5px;
+}
+
+.tabs .tab-body {
+  position: relative;
+  height: 100%;
+}
+
+.tabs .tab-body div {
+  position: absolute;
+  top: -200%;
+  opacity: 0;
+  margin-top: 5px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: opacity 500ms ease-in-out 0ms, -webkit-transform 500ms ease-in-out 0ms;
+  transition: opacity 500ms ease-in-out 0ms, -webkit-transform 500ms ease-in-out 0ms;
+  transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+  transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms, -webkit-transform 500ms ease-in-out 0ms;
+}
+
+.tabs .tab-body div.active {
+  top: 0px;
+  left: -370px;
+  width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.tabs .tab-body p {
+  font-size: 1rem;
+  color: #0a175c;
+}
+
+.discover {
+  padding: 5rem 15rem;
+}
+
+.discover button {
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  background: white;
+  color: #0a175c;
+}
+
+.discover button:hover {
+  background: #0a175c;
+  color: white;
+  font-weight: 700;
+}
+
+.our-stories {
+  padding: 3rem 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-stories__title {
+  font-family: "Anton", sans-serif;
+  font-size: 3rem;
+  line-height: 70px;
+  text-align: center;
+  color: #0a175c;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 7rem;
+}
+
+.our-stories .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-stories .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Anton", sans-serif;
+  color: #0a175c;
+}
+
+.our-stories .cards .card img {
+  width: 25vw;
+  height: 16vw;
+  margin-bottom: 2rem;
+}
+
+.our-stories .cards .card h5 {
+  color: #556098;
+  font-weight: 500;
+}
+
+.our-stories .cards .card h2 {
+  margin-top: 2rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family: "Popins", sans-serif;
+}
+
+.our-stories .cards .card p {
+  width: 85%;
+  font-family: "Popins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+.our-stories .cards .card h6 {
+  color: #556098;
+  font-style: italic;
+}
+
+@media screen and (min-width: 720px) {
+  .our-stories .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.our-stories__btn {
+  padding: 0.7rem 4rem;
+  outline: none;
+  border-radius: 5px;
+  background: white;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.our-stories__btn a {
+  text-decoration: none;
+  color: #0a175c;
+}
+
+.our-stories__btn:hover {
+  color: white;
+  background: #0a175c;
+}
+
+.our-stories__btn:hover a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

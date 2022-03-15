@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"); // menu icon
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400&family=Poppins&family=Roboto&display=swap"); // google fonts
+
+$light: #89e0d1;
+$dark: #0a175c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Popins", sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $light;
+  padding: 0.3rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      background: $dark;
+      color: white;
+      padding: 0.3rem 1rem;
+      border: 3px solid $dark;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background: $light;
+      color: $dark;
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        position: relative;
+        float: left;
+
+        a {
+          font-size: 1rem;
+          padding: 30px;
+          color: $dark;
+          display: block;
+        }
+
+        a:hover {
+          background: white;
+        }
+
+        ul {
+          position: absolute;
+          left: 0;
+          width: 250px;
+          background: #fff;
+          display: none;
+
+          li {
+            width: 100%;
+
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      li:focus-within > ul,
+      li:hover > ul {
+        display: initial;
+      }
+    }
+  }
+
+  #menu-bar {
+    display: none;
+  }
+
+  label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+  }
+
+  @media screen and (max-width: 1120px) {
+    padding: 30px;
+    background: white;
+
+    label {
+      display: initial;
+    }
+
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: none;
+      //   display: flex;
+      // //   flex-direction: column;
+      // //   justify-content: center;
+      padding-bottom: 1.5rem;
+
+      button {
+        width: 93%;
+        margin-left: 1rem;
+        margin-right: 2rem;
+      }
+
+      button:hover {
+        background: white;
+      }
+
+      ul li {
+        width: 100%;
+
+        ul {
+          position: relative;
+          width: 100%;
+
+          li {
+            background: white;
+
+            a {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    #menu-bar:checked ~ .navbar {
+      display: initial;
+    }
+  }
+}
+
+main {
+  .hero {
+    background: $light;
+    padding: 1rem 7rem;
+    position: relative;
+    margin-top: 3rem;
+
+    .hero__container {
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .hero__container--left {
+        height: 100%;
+        width: 40%;
+
+        h1 {
+          color: $dark;
+          font-family: "Anton", sans-serif;
+          font-size: 60px;
+          margin-bottom: 1rem;
+          margin-top: 0;
+        }
+
+        p {
+          color: $dark;
+          font-family: Poppins;
+          margin-bottom: 2rem;
+        }
+
+        button {
+          padding: 8px 60px;
+          outline: none;
+          border-radius: 5px;
+          background: $dark;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+          &:hover {
+            border: 2px solid $dark;
+            color: $dark;
+            background: $light;
+          }
+          &:hover a {
+            color: $dark;
+          }
+        }
+      }
+
+      &--right {
+        height: 100%;
+        position: relative;
+        width: 60%;
+        text-align: center;
+
+        figure {
+          position: relative;
+          height: 50%;
+
+          #girl {
+            width: 35%;
+          }
+          #man {
+            width: 15%;
+            position: absolute;
+            left: 25%;
+            bottom: -10%;
+          }
+        }
+
+        #dots {
+          width: 20%;
+          height: 20%;
+          position: absolute;
+          left: 15%;
+        }
+      }
+      @media (min-width: 992px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    #ribbon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.tabs {
+  padding: 5rem 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 5rem;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+
+    @media (min-width: 992px) {
+      img {
+        position: absolute;
+        top: 25%;
+        right: -20%;
+        width: 20%;
+      }
+    }
+
+    h1 {
+      font-family: "Anton", sans-serif;
+      font-size: 4rem;
+      color: $dark;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: $dark;
+      text-align: center;
+      font-family: "Popins", sans-serif;
+      font-size: 1.3rem;
+    }
+  }
+
+  .tab-header {
+    color: $dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+
+    div {
+      width: calc(100% / 3);
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.3rem;
+      outline: none;
+    }
+
+    div.active {
+      color: $light;
+    }
+  }
+
+  .tab-indicator {
+    align-self: flex-start;
+    margin-top: 0.6rem;
+    margin-bottom: 2rem;
+    position: relative;
+    width: calc(100% / 3);
+    height: 0.2rem;
+    background: $light;
+    left: 0%;
+    border-radius: 5px;
+  }
+
+  .tab-body {
+    position: relative;
+    height: 100%;
+
+    div {
+      position: absolute;
+      top: -200%;
+
+      opacity: 0;
+      margin-top: 5px;
+      transform: scale(0.9);
+      transition: opacity 500ms ease-in-out 0ms, transform 500ms ease-in-out 0ms;
+    }
+
+    div.active {
+      top: 0px;
+      left: -370px;
+      width: 720px;
+      display: flex;
+      align-self: flex-start;
+      opacity: 1;
+      transform: scale(1);
+    }
+    p {
+      font-size: 1rem;
+      color: $dark;
+    }
+  }
+}
+
+.discover {
+  padding: 5rem 15rem;
+
+  button {
+    padding: 0.7rem 2rem;
+
+    border-radius: 5px;
+    background: white;
+    color: $dark;
+  }
+
+  button:hover {
+    background: $dark;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+// Our stories section
+
+.our-stories {
+  padding: 3rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    line-height: 70px;
+    text-align: center;
+    color: $dark;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 7rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      font-family: "Anton", sans-serif;
+      color: $dark;
+
+      img {
+        width: 25vw;
+        height: 16vw;
+        margin-bottom: 2rem;
+      }
+
+      h5 {
+        color: #556098;
+        font-weight: 500;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-family: "Popins", sans-serif;
+      }
+
+      p {
+        width: 85%;
+        font-family: "Popins", sans-serif;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+      }
+      h6 {
+        color: #556098;
+        font-style: italic;
+      }
+    }
+
+    @media screen and(min-width: 720px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+  }
+
+  &__btn {
+    padding: 0.7rem 4rem;
+    outline: none;
+    border-radius: 5px;
+    background: white;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    a {
+      text-decoration: none;
+      color: $dark;
+    }
+    &:hover {
+      //   border: 2px solid $dark;
+      color: white;
+      background: $dark;
+    }
+    &:hover a {
+      color: white;
+    }
+  }
+}
